@@ -1,4 +1,4 @@
-The following is adapted from my mentor, Elise Fitzgerald & from fellow coder Jenn Eng!
+The following is adapted from my mentor, Elise Fitzgerald, & from fellow coders Jenn Eng & Nick Alberts!
 
 #Intro to jQuery Library
 
@@ -20,7 +20,7 @@ Rails comes with jQuery included as well as jQueryUI.
 
 ## In Sinatra
 
-If you are adding it in a Sinarta app, you can check out this [repository](https://github.com/mlg-/space-tacos) for directions.
+If you are adding it in a Sinatra app, you can check out this [repository](https://github.com/mlg-/space-tacos) for directions.
 
 There are two key ways:
   - download from the [documentation.](http://api.jquery.com/)
@@ -38,7 +38,7 @@ The `$` is the same as including `jQuery` before the selector. For example, `$('
 
 ## First grab the jQuery object
 There are a number of ways to "grab" selectors from the DOM, notice the similarity to css:    
-  - By id `$("#kale");`
+  - By id `$("#allston-diner");`
   - By class `$(".top-bar");`
   - By element `$("h1");`
 
@@ -46,15 +46,15 @@ There are a number of ways to "grab" selectors from the DOM, notice the similari
 You can assign any element you select with jQuery to a variable and then call jQuery methods on it.
 
 ```js
-var kale = $('#kale')
-kale.hide();
+let allston_diner = $('#allston-diner');
+allston_diner.hide();
 ```
 #### Pro-tip: Don't mix with Vanilla JS
 
 When "grabbing" elements from the DOM with jQuery we are returned jQuery objects. We can call jQuery effects and events on jQuery objects but not if we "grab" them with JS.  The below results in an error:
 
 ```js
-var vanilla = document.getElementById("kale")
+let vanilla = document.getElementById("allston-diner")
 vanilla.hide();
 // => Uncaught TypeError: vanilla.hide is not a function(…)
 ```
@@ -64,42 +64,43 @@ To get some inspiration and decide what to do once you grab the item or items yo
 
 ### Hiding an element
 
-`$("#white-powder").hide();`
+`$("#allston-diner").hide();`
 
 [`hide()` documentation](http://api.jquery.com/hide/)
 
 ### Showing an element
 
-`$("#white-powder").show();`
+`$("#allston-diner").show();`
 
 [`show()` documentation](http://api.jquery.com/show/)
 
 ### GET FANCY! FADE OUT!
 
-`$("#neil-gaiman").fadeOut();`
+`$("#rosebud").fadeOut();`
 
 [`fadeOut()` documentation](http://api.jquery.com/fadeOut/)
 
 ### Changing the styling of element(s)
 
-`$("h1").css("color", "teal");`
+`$("h1").css("color", "lawngreen");`
 
 [`css()` documentation](http://api.jquery.com/css/)
 
 or maybe:
 ```
-$(".top-bar").addClass("new_class");
 $(".top-bar").addClass("feature");
 ```
 Why did the top bar disappear? let's take a look at the css for the class "feature"
 
 [`addClass()` documentation](http://api.jquery.com/addclass/)
 
-### Remove an element and then append it somewhere else
+### Remove an element and then append it somewhere else, then add styling to match
 
 ```
-var wormhole = $('#wormhole').remove();
-$('.resources').append(wormhole);
+let cafe_luna_title = $('#cafe-luna-title');
+$('#cafe-luna').remove();
+$('.resources').append(cafe_luna_title);
+$(cafe_luna_title).addClass("list-item");
 ```
 Remove is different from hide, remove takes it out of the DOM
 
@@ -109,8 +110,8 @@ Remove is different from hide, remove takes it out of the DOM
 
 ### Append something new to a list
 ```
-var demogorgon = "Demogorgon"
-$(".resources").append("<li>" + demogorgon + "</li>")
+let new_restaurant = "Figaro's";
+$(".resources").append("<li>" + new_restaurant + "</li>");
 ```
 ## How to use within Rails & Sinatra
 Good practice to add files for different features but that's where you can run into some issues. For the app size you guys are using it's good to keep in one file for now.
@@ -139,27 +140,27 @@ $(document).ready(function(){
 ## Let's Try it Out!
 Let's add these features:
 
-####Toggle the form
+####Toggle the image
 
 ```js
-$("#comic-book").click(function() {
-  $("#comic-book img").toggle();
+$("#zaftigs").click(function() {
+  $("#zaftigs img").toggle();
 });
 ```
 ### Append something new to list from form field, reset field
 ```
-$("#thing-button").click(function() {
-  var newThing = $("#thing-name").val();
-  $("ul").append("<li>" + newThing + "</li>");
-  $("#thing-name").val("");
+$("#restaurant-button").click(function() {
+  let newRestaurant = $("#restaurant-name").val();
+  $("ul").append("<li>" + newRestaurant + "</li>");
+  $("#restaurant-name").val("");
 });
 ```
 
 Notice how the above syntax for grabbing the value is different syntactically then vanilla JS.  The last line resets the name field to be an empty string.  If you refresh the page, whatever you added will be lost because we did not add it to the database so the data was not able to persist...BUT... stay tuned for AJAX :)
+
 Side note: you'll notice the item was added near the top bar as well, this is because there's a ul in my topbar so $("ul") is selecting both unordered lists in the DOM, just an fyi.
-Also keep in mind, we could have executed ALOT more code in here! More often than not, you'll use jQuery to listen to specific events, then combine it with vanilla JS to do
-some manipulation of the objects that jQuery might return, and then when done change how
-the DOM looks on the page to reflect a change. Often times you'll even use AJAX.
+
+Also keep in mind, we could have executed ALOT more code in here! More often than not, you'll use jQuery to listen to specific events, then combine it with vanilla JS to do some manipulation of the objects that jQuery might return, and then when done change how the DOM looks on the page to reflect a change. Often times you'll even use AJAX.
 
 Common Event Listeners
 ```
@@ -177,7 +178,7 @@ Nearly any event you can think of! Note, most are variants of the `.on` method!
 So you've fiddled around with jQuery. You realize that it was rather convenient
 that we could just download jQuery right into our app with a simple file and script.
 
-What's more, you are wondering: Nick dawgy dawg, I noticed that jQuery is probably just one of MANY libraries out there that can beef up our application. What, if anything is out there, and how do I add it to my application, yo?
+What's more, you are probably wondering: I noticed that jQuery is probably just one of MANY libraries out there that can beef up our application. What, if anything is out there, and how do I add it to my application, yo?
 
 - rails gems abound that include these libraries, and you can simply add some to your Gemfile and bundle to add their functionality!
 - some few are hosted on the CDN like jQuery
@@ -199,4 +200,3 @@ A few libraries...
 library vs framework
 - library adds features and chunks of code that you can call on when needed
 - a framework requires that you add code in specific places according to accepted conventions, and then calls on THAT code.
-MM
