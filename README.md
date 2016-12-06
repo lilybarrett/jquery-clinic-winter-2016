@@ -7,7 +7,7 @@ jQuery is a JavaScript library. jQuery is a fast, small, and feature-rich JavaSc
 There is also another extension library called jQuery UI that provides some nice effects and methods for enhanced user experiences.
 
 ## Where to Start: New Learning Center!
-jQuery is a very popularly used library and beyond documentation the authors of jQuery have launched a (beta) [Learning Center](https://learn.jquery.com/) that approached documentation in beginner friendly way.
+jQuery is a very popularly used library and beyond documentation the authors of jQuery have launched a (beta) [Learning Center](https://learn.jquery.com/) that approaches documentation in a beginner-friendly way.
 
 ####Cautionary Tale
 Everything you can do in jQuery is written with regular ([sometimes jokingly called "vanilla"](http://vanilla-js.com/)) JavaScript. Therefore, understanding the fundamentals of JavaScript as a language (its constructs and syntax, its orientation to particular programming concepts) is *important* (it's not just us telling you - [the learning docs even say so!](http://learn.jquery.com/about-jquery/)) in order to effectively use jQuery. You want to be careful not to use jQuery as a crutch to avoid engaging with the internals of JavaScript and instead use it as a tool to expedite your work.
