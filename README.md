@@ -7,7 +7,7 @@ jQuery is a JavaScript library. jQuery is a fast, small, and feature-rich JavaSc
 There is also another extension library called jQuery UI that provides some nice effects and methods for enhanced user experiences.
 
 ## Where to Start: New Learning Center!
-jQuery is a very popularly used library and beyond documentation the authors of jQuery have launched a (beta) Learning Center that approached documentation in beginner friendly way.
+jQuery is a very popularly used library and beyond documentation the authors of jQuery have launched a (beta) [Learning Center](https://learn.jquery.com/) that approached documentation in beginner friendly way.
 
 ####Cautionary Tale
 Everything you can do in jQuery is written with regular ([sometimes jokingly called "vanilla"](http://vanilla-js.com/)) JavaScript. Therefore, understanding the fundamentals of JavaScript as a language (its constructs and syntax, its orientation to particular programming concepts) is *important* (it's not just us telling you - [the learning docs even say so!](http://learn.jquery.com/about-jquery/)) in order to effectively use jQuery. You want to be careful not to use jQuery as a crutch to avoid engaging with the internals of JavaScript and instead use it as a tool to expedite your work.
@@ -16,7 +16,7 @@ Everything you can do in jQuery is written with regular ([sometimes jokingly cal
 
 `rails new` and done!
 
-Rails comes with jQuery included as well as jQueryUI.
+Rails comes with jQuery included as well as jQueryUI. Easy!
 
 ## In Sinatra
 
@@ -25,13 +25,6 @@ If you are adding it in a Sinatra app, you can check out this [repository](https
 There are two key ways:
   - download from the [documentation.](http://api.jquery.com/)
   - include link from [Google Hosted Libraries](https://developers.google.com/speed/libraries/)
-
-## Using FireQuery
-
-I've yet to find an equivalent for Chrome, but Mozilla has a nifty extension called FireQuery which you can use
-with the Mozilla developer tools if you really want to start using jQuery elements on any old webpage.
-
-[FireQuery](https://addons.mozilla.org/en-us/firefox/addon/firequery/) adds a lot of neat jQuery features, but what I love about it is that it also injects jQuery into the webpage you are on so that you can navigate the DOM using jQuery rather than those old fashioned vanilla js methods.
 
 ### Note on Syntax
 The `$` is the same as including `jQuery` before the selector. For example, `$('h2')` is the same as `jQuery('h2')` the `$` here denotes the library. jQuery being among the most popular libraries it's safe to include the dollar sign in all referees. But be aware that other libraries may also use the `$` which could through you errors down the road or a namespace collision, at which point you should refer to the jQuery [documentation on this topic](http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/).
@@ -193,9 +186,9 @@ installed in your app
 much like Ruby hosts their gems on THEIR website
 
 A few libraries...
-- lodash: takes the hassle out of working with arrays, unless you looovvvee the current way
+- lodash (which you saw on Monday night): takes the hassle out of working with arrays, unless you looovvvee the current way
 - underscore: EVEN MORE awesome functions that you can call on arrays and objects
-- react: thats right....its a library. It has oodles of things you can call on, but it is up to you
+- react: thats right...its a library. It has oodles of things you can call on, but it is up to you
 
 library vs framework
 - library adds features and chunks of code that you can call on when needed
