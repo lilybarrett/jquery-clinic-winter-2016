@@ -2,7 +2,7 @@ The following is adapted from my mentor, Elise Fitzgerald, & from fellow coders 
 
 #Intro to jQuery Library
 
-jQuery is a JavaScript library. jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
+jQuery is a JavaScript library. jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and AJAX much simpler with an easy-to-use API that works across a multitude of browsers.
 
 There is also another extension library called jQuery UI that provides some nice effects and methods for enhanced user experiences.
 
