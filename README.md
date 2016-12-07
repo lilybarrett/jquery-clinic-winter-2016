@@ -158,8 +158,6 @@ Notice how the above syntax for grabbing the value is different syntactically th
 
 Side note: you'll notice the item was added near the top bar as well, this is because there's a ul in my topbar so $("ul") is selecting both unordered lists in the DOM, just an fyi.
 
-Also keep in mind, we could have executed ALOT more code in here! More often than not, you'll use jQuery to listen to specific events, then combine it with vanilla JS to do some manipulation of the objects that jQuery might return, and then when done change how the DOM looks on the page to reflect a change. Often times you'll even use AJAX.
-
 Common Event Listeners
 ```
 click()
