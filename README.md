@@ -29,7 +29,7 @@ There are two key ways:
 ### Note on Syntax
 The `$` is the same as including `jQuery` before the selector. For example, `$('h2')` is the same as `jQuery('h2')` the `$` here denotes the library.
 
-jQuery being among the most popular libraries it's safe to include the dollar sign in all referees. But be aware that other libraries may also use the `$` which could through you errors down the road or a namespace collision, at which point you should refer to the jQuery [documentation on this topic](http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/).
+jQuery being among the most popular libraries it's safe to include the dollar sign in all references. But be aware that other libraries may also use the `$` which could throw you errors down the road or a namespace collision, at which point you should refer to the jQuery [documentation on this topic](http://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/).
 
 ## First grab the jQuery object
 There are a number of ways to "grab" elements, using CSS selectors (as you did in AJAX!), from the DOM.
