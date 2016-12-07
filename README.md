@@ -154,7 +154,7 @@ $("#restaurant-button").click(function() {
 });
 ```
 
-Notice how the above syntax for grabbing the value is different syntactically then vanilla JS.  The last line resets the name field to be an empty string.  If you refresh the page, whatever you added will be lost because we did not add it to the database so the data was not able to persist...BUT... stay tuned for AJAX :)
+Notice how the above syntax for grabbing the value is different syntactically then vanilla JS.  The last line resets the name field to be an empty string.  If you refresh the page, whatever you added will be lost because we did not add it to the database so the data was not able to persist...BUT...you can use AJAX for that. :)
 
 Side note: you'll notice the item was added near the top bar as well, this is because there's a ul in my topbar so $("ul") is selecting both unordered lists in the DOM, just an fyi.
 
