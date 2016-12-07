@@ -14,7 +14,9 @@ Everything you can do in jQuery is written with regular ([sometimes jokingly cal
 
 ## How to set up in a Rails
 
-Include `gem 'jquery-rails', '~> 4.1'` in your Gemfile and `bundle`.
+`rails new` and done!
+
+Rails comes with jQuery included as well as jQueryUI.
 
 ## In Sinatra
 
