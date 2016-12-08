@@ -44,8 +44,8 @@ The `#` refers to an id, `.` refers to a class, and elements don't require any e
 You can assign any element you select with jQuery to a variable and then call jQuery methods on it.
 
 ```js
-let allston_diner = $('#allston-diner');
-allston_diner.hide();
+let allstonDiner = $('#allston-diner');
+allstonDiner.hide();
 ```
 #### Pro-tip: Don't mix with Vanilla JS
 
@@ -95,10 +95,10 @@ Why did the top bar disappear? let's take a look at the css for the class "featu
 ### Remove an element and then append it somewhere else, then add styling to match
 
 ```
-let cafe_luna_title = $('#cafe-luna-title');
+let cafeLunaTitle = $('#cafe-luna-title');
 $('#cafe-luna').remove();
-$('.resources').append(cafe_luna_title);
-$(cafe_luna_title).addClass("list-item");
+$('.resources').append(cafeLunaTitle);
+$(cafeLunaTitle).addClass("list-item");
 ```
 Remove is different from hide, remove takes it out of the DOM
 
@@ -108,8 +108,8 @@ Remove is different from hide, remove takes it out of the DOM
 
 ### Append something new to a list
 ```
-let new_restaurant = "Figaro's";
-$(".resources").append("<li>" + new_restaurant + "</li>");
+let newRestaurant = "Figaro's";
+$(".resources").append("<li>" + newRestaurant + "</li>");
 ```
 ## How to use within Rails & Sinatra
 Good practice to add files for different features but that's where you can run into some issues. For the app size you guys are using it's good to keep in one file for now.
